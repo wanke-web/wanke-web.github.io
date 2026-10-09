@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>用户服务协议 - 万源阅读 | Terms of Service - Flutter Read</title>
+  <meta name="description" content="万源阅读移动端应用用户服务协议、法律声明与使用规范。">
+  <style>
+    :root {
+      --bg: #F8FAFC;
+      --card-bg: #FFFFFF;
+      --text-main: #0F172A;
+      --text-sub: #475569;
+      --text-hint: #94A3B8;
+      --accent: #0D9488;
+      --accent-soft: rgba(13, 148, 136, 0.08);
+      --accent-hover: #0F766E;
+      --highlight-border: #0D9488;
+      --border: rgba(148, 163, 184, 0.2);
+      --header-border: rgba(148, 163, 184, 0.15);
+      --shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0B0F19;
+        --card-bg: #141B2D;
+        --text-main: #F1F5F9;
+        --text-sub: #94A3B8;
+        --text-hint: #64748B;
+        --accent: #2DD4BF;
+        --accent-soft: rgba(45, 212, 191, 0.15);
+        --accent-hover: #5EEAD4;
+        --highlight-border: #2DD4BF;
+        --border: rgba(255, 255, 255, 0.1);
+        --header-border: rgba(255, 255, 255, 0.08);
+        --shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.75;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: var(--bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--header-border);
+      padding: 16px 24px;
+    }
+
+    .header-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-main);
+      text-decoration: none;
+      letter-spacing: 0.3px;
+    }
+
+    .logo-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      background: linear-gradient(135deg, #0D9488, #0284C7);
+      border-radius: 9px;
+      color: #FFF;
+      font-size: 16px;
+      box-shadow: 0 2px 8px rgba(13, 148, 136, 0.25);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 16px;
+    }
+
+    .nav-links a {
+      color: var(--text-sub);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--accent);
+    }
+
+    main {
+      max-width: 860px;
+      margin: 40px auto 80px;
+      padding: 0 24px;
+    }
+
+    .doc-header {
+      margin-bottom: 36px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .doc-tag {
+      display: inline-block;
+      background-color: var(--accent-soft);
+      color: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 14px;
+      letter-spacing: 0.5px;
+    }
+
+    h1 {
+      font-size: 2.1rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+      line-height: 1.3;
+    }
+
+    .meta {
+      font-size: 0.88rem;
+      color: var(--text-hint);
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .highlight-box {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--highlight-border);
+      border-radius: 0 14px 14px 0;
+      padding: 20px 24px;
+      margin: 28px 0;
+      box-shadow: var(--shadow);
+    }
+
+    .highlight-box h3 {
+      font-size: 1.05rem;
+      margin-bottom: 8px;
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .highlight-box p {
+      font-size: 0.94rem;
+      color: var(--text-sub);
+      margin: 0;
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin: 40px 0 16px;
+      padding-top: 12px;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h2::before {
+      content: "";
+      display: inline-block;
+      width: 4px;
+      height: 1.1em;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+
+    p {
+      margin-bottom: 14px;
+      color: var(--text-sub);
+      font-size: 0.98rem;
+    }
+
+    ul, ol {
+      margin: 0 0 20px 24px;
+      color: var(--text-sub);
+    }
+
+    li {
+      margin-bottom: 8px;
+      font-size: 0.96rem;
+    }
+
+    strong {
+      color: var(--text-main);
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 36px 24px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-hint);
+      background-color: var(--bg);
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-badge">阅</span>
+        <span>万源阅读 · 法律与合规中心</span>
+      </div>
+      <div class="nav-links">
+        <a href="privacy.html">隐私政策</a>
+        <a href="terms.html" class="active">用户协议</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="doc-header">
+      <span class="doc-tag">Terms of Service · 法律与服务协议</span>
+      <h1>万源阅读 用户服务协议</h1>
+      <div class="meta">
+        <span>应用名称：万源阅读</span>
+        <span>生效日期：2026 年 10 月 9 日</span>
+        <span>版本号：v1.0.0</span>
+      </div>
+    </div>
+
+    <div class="highlight-box">
+      <h3>📋 重点提示</h3>
+      <p>
+        请您在下载、安装并使用「万源阅读」移动应用程序前，务必审慎阅读并充分理解本协议各条款。<strong>特别是涉及免除或者限制责任的条款、第三方书源内容中立声明以及法律适用管辖条款。</strong>当您开始使用本应用，即表示您已自愿阅读并完全同意接受本协议的全部约定。
+      </p>
+    </div>
+
+    <h2>一、协议的确认与接纳</h2>
+    <p>
+      1.1 本协议由您（以下简称“用户”）与「万源阅读」开发及运营团队（以下简称“我们”）共同缔结，旨在明确您在使用「万源阅读」移动端软件过程中的权利与义务。
+    </p>
+    <p>
+      1.2 本协议的内容包括协议正文及我们已经发布或将来可能发布的各项规则、声明（包括但不限于《万源阅读 隐私保护政策》）。所有规则均为本协议不可分割的组成部分，与本协议具有同等法律效力。
+    </p>
+
+    <h2>二、软件性质与功能说明</h2>
+    <p>
+      2.1 <strong>技术工具定位：</strong> 「万源阅读」是一款开源且完全本地化的移动端文本排版与书源规则解析工具。软件提供本地阅读排版引擎、多种翻页动画、日间/夜间与自定义阅读主题、书源规则语法解析（XPath、JSONPath、正则表达式）、文本内容净化替换、本地缓存管理以及本地 Wi-Fi / WebDAV 辅助传输等技术辅助功能。
+    </p>
+    <p>
+      2.2 <strong>无内容运营声明：</strong> 本软件本身<strong>不具备任何内容创作、编辑、存储与云端发布平台职能，不提供、不销售、不内置任何受版权保护的小说、电子书、漫画或文学出版物</strong>。所有内容展现均完全依赖于用户自行导入的第三方公开网络书源规则。
+    </p>
+
+    <h2>三、重要合规声明与第三方书源免责</h2>
+    <p>
+      3.1 <strong>技术中立原则：</strong> 我们严格恪守技术中立原则与“避风港原则”。「万源阅读」仅为用户提供本地数据解析与文本排版技术支持，不对任何第三方网站或网络资源的内容合法性、准确性、完整性进行任何形式的保证或担保。
+    </p>
+    <p>
+      3.2 <strong>书源由用户自主负责：</strong> 用户在使用本软件时自行添加、订阅或导入的书源规则，均由用户自行从第三方渠道获取。第三方源站所提供的正文内容、章节目录、图片等资源的知识产权归属于原作者、出版单位或对应合法权利人所有。
+    </p>
+    <p>
+      3.3 <strong>版权保护与合法使用：</strong> 用户承诺严格遵守《中华人民共和国著作权法》《信息网络传播权保护条例》及相关知识产权法律法规，仅将本软件用于个人学习、研究或欣赏之目的，<strong>严禁利用本软件或第三方书源从事侵犯他人知识产权、传播违法违规信息或进行商业牟利等行为</strong>。
+    </p>
+    <p>
+      3.4 <strong>侵权投诉与处理：</strong> 如任何权利人认为通过第三方规则解析到的网络内容侵犯了其合法权益，应直接向该内容所在的源站点主张权利。若权利人认为本软件涉及侵权，可随时通过本协议公布的联系方式与我们沟通，我们将积极配合核查。
+    </p>
+
+    <h2>四、软件许可与使用规范</h2>
+    <p>
+      4.1 <strong>许可范围：</strong> 我们授予您一项个人的、不可转让的、非排他性的免费许可，以在您的个人智能移动设备上下载、安装并运行本软件。
+    </p>
+    <p>
+      4.2 <strong>禁止行为：</strong> 您在使用本软件时，不得实施下列行为：
+    </p>
+    <ul>
+      <li>对本软件进行恶意反向工程、反向汇编、反向编译，或以其他破坏性方式挖掘源代码；</li>
+      <li>利用任何插件、外挂、第三方脚本对本软件实施干扰、破坏或进行网络攻击；</li>
+      <li>利用本软件批量爬取、过度消耗第三方服务器资源，或实施任何阻碍互联网网络秩序的行为；</li>
+      <li>将本软件用于任何违反中华人民共和国法律法规、危害国家安全或侵犯他人合法权益的活动。</li>
+    </ul>
+
+    <h2>五、本地数据存储与用户责任</h2>
+    <p>
+      5.1 <strong>端侧本地优先：</strong> 本应用遵循“本地优先”设计准则。您的书架藏书、阅读历史与进度、自定义书源规则、文本替换字典以及个性化排版配置均安全保存在您设备的受保护沙盒存储或本地 SQLite 数据库中，不设中心化用户服务器。
+    </p>
+    <p>
+      5.2 <strong>数据自主备份责任：</strong> 鉴于本软件纯本地运行、不提供中心化云端存储的特性，<strong>若您发生更换设备、主动清除应用数据、系统刷机或卸载应用等行为，本地存储的数据将会丢失。请您务必定期利用应用内置的【导出书源】与【导出备份】功能将数据保存至外部安全位置。因用户未及时备份导致的数据遗失，我们不承担任何恢复责任。</strong>
+    </p>
+
+    <h2>六、AI 辅助功能与第三方服务说明</h2>
+    <p>
+      6.1 本软件可能包含 AI 辅助阅读与文本总结等实验性功能。此类功能需要用户自行提供第三方 AI 服务提供商（如 OpenAI 等）的有效 API Key 方可使用。
+    </p>
+    <p>
+      6.2 客户端直连第三方服务：在使用 AI 功能时，请求直接由您的设备端发送至您配置的对应服务商接口，我们不设立中转服务器，亦不收集您的 API Key、输入文本或输出结果。
+    </p>
+    <p>
+      6.3 因第三方 AI 接口服务产生的费用、稳定性问题、生成内容之合规性，均由用户与对应服务提供商依法约定，我们对此不承担责任。
+    </p>
+
+    <h2>七、知识产权声明</h2>
+    <p>
+      7.1 「万源阅读」本身的软件架构、客户端源代码、界面交互设计、图标图形元素均受中华人民共和国著作权法及国际版权条约的保护。
+    </p>
+    <p>
+      7.2 未经我们事先书面许可，任何人不得出于商业盈利目的擅自复制、修改、镜像或打包分发本软件。
+    </p>
+
+    <h2>八、免责声明与服务变更</h2>
+    <p>
+      8.1 <strong>按“现状”提供：</strong> 本软件按“现状”（AS IS）及“现有”基础提供。在适用法律允许的最大范围内，我们不对软件运行的绝对无错误、完全不中断以及与所有第三方源站的永久兼容性提供任何明示或暗示的保证。
+    </p>
+    <p>
+      8.2 <strong>网络与源站波动：</strong> 第三方书源可能因源网站防爬机制调整、关停或网络故障而失效，属于正常技术现象，不代表本软件存在服务故障。
+    </p>
+    <p>
+      8.3 <strong>协议修改：</strong> 我们有权根据产品功能更新或法律政策要求修订本协议。修订后的协议在网页上公布后即代替原协议生效。若您在协议更新后继续使用本软件，即视为您接受修改后的协议。
+    </p>
+
+    <h2>九、法律适用与管辖</h2>
+    <p>
+      9.1 本协议的订立、执行、解释及争议的解决均应适用中华人民共和国法律。
+    </p>
+    <p>
+      9.2 如双方就本协议内容或其履行发生任何争议，双方应首先通过友好协商解决；协商不成的，任何一方均可向运营方所在地有管辖权的人民法院提起诉讼。
+    </p>
+
+    <h2>十、联系方式</h2>
+    <p>
+      如您对本协议有任何疑问、意见、建议或版权相关事宜，欢迎通过应用内【设置】->【关于】中的反馈渠道或开发者公开联络方式与我们取得联系。
+    </p>
+  </main>
+
+  <footer>
+    <p>© 2026 万源阅读 All rights reserved. 遵循技术中立与本地优先原则。</p>
+  </footer>
+
+</body>
+</html>
